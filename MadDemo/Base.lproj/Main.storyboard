@@ -52,8 +52,14 @@
                                     <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ukt-d6-YKv"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPq-G1-a3v">
+                                <rect key="frame" x="61" y="133" width="293" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTn-2s-f5o">
-                                <rect key="frame" x="116" y="734" width="183" height="81"/>
+                                <rect key="frame" x="116" y="467" width="183" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Change Text">
@@ -67,12 +73,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.5439374401061563" blue="0.4968813759656403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="R30-9O-KOv" appends="YES" id="DDh-np-O1v"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="textField" destination="pPq-G1-a3v" id="2W6-Sz-SJj"/>
                         <outlet property="textLabel" destination="QRq-xd-0KU" id="rQJ-s0-oAy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="R30-9O-KOv" userLabel="Tap BG to Reset">
+                    <connections>
+                        <action selector="onResetGesture:" destination="BYZ-38-t0r" id="BjC-uQ-K4y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="13.043478260869566" y="88.392857142857139"/>
         </scene>
